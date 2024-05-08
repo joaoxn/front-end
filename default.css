@@ -81,6 +81,11 @@ a:visited {
     font-size: small;
 }
 
+.icon {
+    max-width: 50px;
+    max-height: 50px;
+}
+
 #page-container {
     position: relative;
     min-height: 100vh;
