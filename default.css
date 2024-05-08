@@ -94,3 +94,7 @@ a:visited {
 #content-wrap {
     padding-bottom: 10rem;
 }
+
+#header-text {
+    width: 100%;
+}
