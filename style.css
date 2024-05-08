@@ -1,0 +1,37 @@
+.exercise {
+    padding: 0.5rem;
+    background-color: var(--button-primary-default);
+    border-radius: 2vmax;
+}
+
+.exercise:hover {
+    background-color: var(--button-primary-hover);
+    transform: scale(1.1);
+    transition-duration: 500ms;
+}
+
+.exercise > * {
+    color: var(--text-invert);
+    margin: 0.25rem;
+}
+
+.exercise > img {
+    width: 200px;
+}
+
+#div-exercises {
+    margin: 1rem;
+}
+
+#div-exercises > * {
+    margin: 1rem;
+}
+
+.text-secondary {
+    margin: 0;
+    color: var(--text-secondary);
+}
+
+#footer-bottom > * {
+    margin: 0.25rem 0.5rem;
+}
