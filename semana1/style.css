@@ -22,7 +22,7 @@
 .input-advanced:focus {
     width: 19rem;
     height: 4rem;
-    border: none;
+    outline: none;
     border-radius: 0.5rem;
 }
 
