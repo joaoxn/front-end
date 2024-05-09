@@ -11,5 +11,5 @@ function updateResizeBased() {
 }
 
 function computedStyleNumber(element, styleProperty) {
-    return parseFloat(window.getComputedStyle(element)[styleProperty].replace(/\D/g, "")[0]);
+    return parseFloat(window.getComputedStyle(element)[styleProperty].replace(/\D/g, ""));
 }
