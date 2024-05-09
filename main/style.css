@@ -2,6 +2,7 @@
     padding: 0.5rem;
     background-color: var(--button-primary-default);
     border-radius: 2vmax;
+    box-shadow: 8px 8px 3px var(--background-tertiary);
 }
 
 .exercise:hover {
