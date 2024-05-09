@@ -27,11 +27,6 @@
     margin: 1rem;
 }
 
-.text-secondary {
-    margin: 0;
-    color: var(--text-secondary);
-}
-
 #footer-bottom > * {
     margin: 0.25rem 0.5rem;
 }
