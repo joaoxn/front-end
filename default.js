@@ -9,5 +9,5 @@ function updateResizeBased() {
 }
 
 function computedStyleNumber(element, styleProperty) {
-    return window.getComputedStyle(element)[styleProperty]
+    return parseFloat(window.getComputedStyle(element)[styleProperty].match(/-?\d+(\.\d+)?/)[0])
 }
