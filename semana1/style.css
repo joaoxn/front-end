@@ -19,7 +19,7 @@
     width: 200px;
 }
 
-.input-advanced:hover {
+.input-advanced:focus {
     width: 19rem;
     height: 4rem;
 }
