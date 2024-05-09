@@ -5,7 +5,7 @@ function updateResizeBased() {
     content = document.querySelector("#content-wrap");
     footer = document.querySelector(".footer");
     
-    const newHeight = window.getComputedStyle(footer, "height") + window.computedStyleNumber(content, "paddingTop") + "px";
+    const newHeight = window.computedStyleNumber(footer, "height") + window.computedStyleNumber(content, "paddingTop") + "px";
     
     content.style.paddingBottom = newHeight;
 }
