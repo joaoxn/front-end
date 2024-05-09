@@ -81,6 +81,11 @@ a:visited {
     font-size: small;
 }
 
+.text-secondary {
+    margin: 0;
+    color: var(--text-secondary);
+}
+
 #home-icon {
     margin: 20px;
     max-width: 50px;
