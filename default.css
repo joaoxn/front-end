@@ -34,7 +34,7 @@ input[type="text"] {
     border-radius: 1rem;
 }
 
-input[type="text"]:focus {
+input[type="text"]:focus:not(.input-advanced) {
     border: 0.5rem solid var(--text-visited);
 }
 
