@@ -22,6 +22,7 @@
 .input-advanced:focus {
     width: 19rem;
     height: 4rem;
+    border-radius: 0.5rem;
 }
 
 .input-wrapper {
@@ -30,9 +31,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--gradient-emphasis);
+    background: var(--gradient-emphasis);
     border: none;
-    border-radius: 1.5rem;
+    border-radius: 1rem;
 }
 
 #div-exercises {
