@@ -1,3 +1,7 @@
+button:hover {
+    cursor: pointer;
+}
+
 .exercise {
     padding: 0.5rem;
     background-color: var(--button-primary-default);
@@ -25,11 +29,6 @@
 
 #div-exercises > * {
     margin: 1rem;
-}
-
-.text-secondary {
-    margin: 0;
-    color: var(--text-secondary);
 }
 
 #footer-bottom > * {
