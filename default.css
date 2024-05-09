@@ -10,6 +10,7 @@
     --background-invert: #fff;
     --button-primary-default: #fff;
     --button-primary-hover: #cdcdcd;
+    --gradient-emphasis: linear-gradient(to bottom right, pink, orange);
 }
 
 * {
@@ -26,14 +27,15 @@ body {
     background-color: var(--background-primary);
 }
 
-.input-text {
+input[type="text"] {
     width: 20rem;
-    height: 8rem;
+    height: 5rem;
     border-radius: 1rem;
 }
 
-.input-text:focus {
-    border-color: var(--text-link);
+input[type="text"]:focus {
+    border-color: var(--gradient-emphasis);
+    border-width: 0.5rem;
 }
 
 button {
