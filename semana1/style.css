@@ -1,7 +1,3 @@
-button:hover {
-    cursor: pointer;
-}
-
 .exercise {
     padding: 0.5rem;
     background-color: var(--button-primary-default);
