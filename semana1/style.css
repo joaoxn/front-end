@@ -36,6 +36,10 @@
     margin: 0.25rem 0.5rem;
 }
 
+#start * {
+    color: var(--text-invert);
+}
+
 /* @media screen and (max-width: 800px) {
     #div-exercises {
         max-width: 100%;
