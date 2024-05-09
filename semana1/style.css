@@ -22,6 +22,7 @@
 .input-advanced:focus {
     width: 19rem;
     height: 4rem;
+    border: none;
     border-radius: 0.5rem;
 }
 
