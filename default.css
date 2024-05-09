@@ -101,6 +101,11 @@ a:visited {
     transition-duration: 500ms;
 }
 
+#home-link {
+    margin: 0;
+    float: left;
+}
+
 #page-container {
     position: relative;
     min-height: 100vh;
