@@ -26,6 +26,16 @@ body {
     background-color: var(--background-primary);
 }
 
+.input-text {
+    width: 20rem;
+    height: 8rem;
+    border-radius: 1rem;
+}
+
+.input-text:focus {
+    border-color: var(--text-link);
+}
+
 button {
     width: 10rem;
     height: 3rem;
