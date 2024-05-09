@@ -19,6 +19,17 @@
     width: 200px;
 }
 
+.input-advanced:hover {
+    width: 19rem;
+    height: 4rem;
+}
+
+.input-wrapper {
+    background-color: var(--gradient-emphasis);
+    border: none;
+    border-radius: 1rem;
+}
+
 #div-exercises {
     margin: 1rem;
 }

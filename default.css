@@ -10,7 +10,7 @@
     --background-invert: #fff;
     --button-primary-default: #fff;
     --button-primary-hover: #cdcdcd;
-    --gradient-emphasis: linear-gradient(to bottom right, pink, orange);
+    --gradient-emphasis: linear-gradient(to bottom right, #ffadff, lavender);
 }
 
 * {
@@ -35,8 +35,7 @@ input[type="text"] {
 }
 
 input[type="text"]:focus {
-    border: 0.5rem solid var(--gradient-emphasis);
-    border-width: 0.5rem;
+    border: 0.5rem solid var(--text-visited);
 }
 
 button {
