@@ -31,7 +31,7 @@
     margin: 0.25rem 0.5rem;
 }
 
-#start * {
+#start *:not(button) {
     color: var(--text-invert);
 }
 
