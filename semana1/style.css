@@ -35,6 +35,22 @@
     color: var(--text-invert);
 }
 
+#page-description p {
+    font-size: 24px;
+}
+
+button {
+    color: var(--text-primary);
+    background-color: transparent;
+    border-color: var(--button-primary-default);
+    border-radius: 1rem;
+}
+
+button:hover {
+    color: var(--text-invert);
+    background-color: var(--button-primary-hover);
+}
+
 /* @media screen and (max-width: 800px) {
     #div-exercises {
         max-width: 100%;
