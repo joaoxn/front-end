@@ -30,11 +30,13 @@ body {
 input[type="text"] {
     width: 20rem;
     height: 5rem;
+    border: none;
     border-radius: 1rem;
+    border-color: var(--gradient-emphasis);
 }
 
 input[type="text"]:focus {
-    border-color: var(--gradient-emphasis);
+    border: 0.5rem solid var(--gradient-emphasis);
     border-width: 0.5rem;
 }
 
