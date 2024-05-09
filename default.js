@@ -5,5 +5,5 @@ function updateResizeBased() {
     content = document.querySelector("#content-wrap")
     footer = document.querySelector(".footer")
     
-    content.style.height = window.getComputedStyle(footer).height
+    content.style.paddingBottom = window.getComputedStyle(footer).height
 }
