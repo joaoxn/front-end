@@ -10,7 +10,8 @@
     --background-invert: #fff;
     --button-primary-default: #fff;
     --button-primary-hover: #cdcdcd;
-    --gradient-emphasis: linear-gradient(to bottom right, #ffadff, lavender);
+    --solid-emphasis: #4673c8;
+    --gradient-emphasis: linear-gradient(to bottom right, #8cb4ff, #003391);
 }
 
 * {
@@ -28,19 +29,21 @@ body {
 }
 
 input[type="text"] {
-    width: 20rem;
-    height: 5rem;
+    width: 15rem;
+    height: 2.5rem;
+    padding-left: 0.5rem;
     border: none;
     border-radius: 1rem;
 }
 
 input[type="text"]:focus:not(.input-advanced) {
-    border: 0.5rem solid var(--text-visited);
+    outline: none;
+    border: 0.375rem solid var(--solid-emphasis);
 }
 
 button {
-    width: 10rem;
-    height: 3rem;
+    width: 8rem;
+    height: 2.5rem;
     color: var(--text-primary);
     font-size: 24px;
     background-color: transparent;

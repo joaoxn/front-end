@@ -1,3 +1,7 @@
+input, textarea {
+    color: #000;
+}
+
 .exercise {
     padding: 0.5rem;
     background-color: var(--button-primary-default);
@@ -20,15 +24,15 @@
 }
 
 .input-advanced:focus {
-    width: 19rem;
-    height: 4rem;
+    width: 14.25rem;
+    height: 1.75rem;
     outline: none;
-    border-radius: 0.5rem;
+    border-radius: 0.75rem;
 }
 
 .input-wrapper {
-    width: 20rem;
-    height: 5rem;
+    width: 15rem;
+    height: 2.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,24 +41,20 @@
     border-radius: 1rem;
 }
 
-#div-exercises {
-    margin: 1rem;
-}
-
-#div-exercises > * {
-    margin: 1rem;
-}
-
 #footer-bottom > * {
     margin: 0.25rem 0.5rem;
 }
 
-#start *:not(button) {
-    color: var(--text-invert);
-}
-
 #page-description p {
     font-size: 24px;
+}
+
+#start > * {
+    margin: 0.5rem;
+}
+
+#start *:not(button) {
+    color: var(--text-invert);
 }
 
 /* @media screen and (max-width: 800px) {

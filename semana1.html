@@ -12,13 +12,17 @@
 <body id="page-container">
     <header class="header">
         <a id="home-link" href="main.html">
-            <img id="home-icon" alt="Home Icon - Go to Home" src="https://store-images.s-microsoft.com/image/apps.9621.13858148302589540.63acfc5f-343f-40ae-86b2-8c6f973ef385.5befa77d-ab86-4841-aaa1-1b3d976835a3?h=464" />
+            <img id="home-icon" alt="Home Icon - Go to Home"
+                src="https://store-images.s-microsoft.com/image/apps.9621.13858148302589540.63acfc5f-343f-40ae-86b2-8c6f973ef385.5befa77d-ab86-4841-aaa1-1b3d976835a3?h=464" />
         </a>
-        <h1><center>Exercício da Semana 1 - Front-End:<br/><b>LabQuiz</b></center></h1>
+        <h1>
+            <center>Exercício da Semana 1 - Front-End:<br /><b>LabQuiz</b></center>
+        </h1>
         <div id="page-description">
-            <p>Esse é o exercício da primeira semana de Front-End. Teste seus conhecimentos neste breve quiz sobre Front-End, focado em HTML!</p>
+            <p>Este é o exercício da primeira semana de Front-End. Teste seus conhecimentos neste breve questionário sobre
+                Front-End, focado em HTML!</p>
         </div>
-        <form id="start">
+        <form id="start" class="row">
             <div class="input-wrapper">
                 <input id="name" class="input-advanced" type="text" placeholder="Insira seu nome">
             </div>
@@ -26,7 +30,48 @@
         </form>
     </header>
     <main id="content-wrap">
-        <p>*test*</p>
+        <form id="quiz">
+            <label for="ans1">1. Como se define um estilo inline em HTML?</label><br />
+            <textarea id="ans1" name="answer1"></textarea>
+            <br /><br />
+            <label>2. Qual é a tag usada para criar uma lista ordenada em HTML?</label><br />
+            <input id="ans2-opt1" type="radio" name="answer2" /> <label for="ans2-opt1">ol</label><br />
+            <input id="ans2-opt2" type="radio" name="answer2" /> <label for="ans2-opt2">ul</label><br />
+            <input id="ans2-opt3" type="radio" name="answer2" /> <label for="ans2-opt3">li</label><br />
+            <input id="ans2-opt4" type="radio" name="answer2" /> <label for="ans2-opt4">order-list</label>
+            <br /><br />
+            <label>3. Qual propriedade CSS é usada para alterar a cor do texto?</label><br />
+            <input id="ans3-opt1" type="radio" name="answer3" /> <label for="ans3-opt1">font-color</label><br />
+            <input id="ans3-opt2" type="radio" name="answer3" /> <label for="ans3-opt2">color</label><br />
+            <input id="ans3-opt3" type="radio" name="answer3" /> <label for="ans3-opt3">background-color</label><br />
+            <input id="ans3-opt4" type="radio" name="answer3" /> <label for="ans3-opt4">text-color</label>
+            <br /><br />
+            <label>4. Como se referencia um arquivo CSS externo em um documento HTML?</label><br />
+            <textarea id="ans4" name="answer4"></textarea>
+            <br /><br />
+            <label>5. Font-size é a propriedade CSS usada para alterar o tamanho da fonte de um texto?</label><br />
+            <input id="ans5-opt1" type="radio" name="answer5" /> <label for="ans5-opt1">Sim</label><br />
+            <input id="ans5-opt2" type="radio" name="answer5" /> <label for="ans5-opt2">Não</label><br />
+            <br /><br />
+            <label>6. Qual é a propriedade CSS usada para definir a largura de um elemento?</label><br />
+            <input id="ans6-opt1" type="checkbox" name="answer6" /> <label for="ans3-opt1">height</label><br />
+            <input id="ans6-opt2" type="checkbox" name="answer6" /> <label for="ans3-opt2">size</label><br />
+            <input id="ans6-opt3" type="checkbox" name="answer6" /> <label for="ans3-opt3">width</label><br />
+            <input id="ans6-opt4" type="checkbox" name="answer6" /> <label for="ans3-opt4">max-width</label>
+            <br /><br />
+            <label>7. Como se cria um comentário em CSS?</label><br />
+            <input id="ans7-opt1" type="checkbox" name="answer7" /> <label for="ans3-opt1">&lt;!-- --&gt;</label><br />
+            <input id="ans7-opt2" type="checkbox" name="answer7" /> <label for="ans3-opt2">//</label><br />
+            <input id="ans7-opt3" type="checkbox" name="answer7" /> <label for="ans3-opt3">/* */</label>
+            <br /><br />
+            <label>8. Qual é a propriedade CSS usada para definir a altura de um elemento?</label><br />
+            <input id="ans8-opt1" type="checkbox" name="answer8" /> <label for="ans3-opt1">height</label><br />
+            <input id="ans8-opt2" type="checkbox" name="answer8" /> <label for="ans3-opt2">size</label><br />
+            <input id="ans8-opt3" type="checkbox" name="answer8" /> <label for="ans3-opt3">min-height</label><br />
+            <input id="ans8-opt4" type="checkbox" name="answer8" /> <label for="ans3-opt4">max-height</label>
+            <br /><br />
+            <button id="enviarFormulario" onclick="enviar()">Enviar</button>
+        </form>
     </main>
     <footer class="footer justify-evenly align wrap">
         <p>João Victor de Souza Olivo - Fullstack Web Developer</p>
@@ -38,6 +83,7 @@
     </footer>
 
     <script src="default.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
