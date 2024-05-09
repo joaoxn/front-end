@@ -40,7 +40,10 @@
 }
 
 button {
+    width: 10rem;
+    height: 3rem;
     color: var(--text-primary);
+    font-size: 24px;
     background-color: transparent;
     border-color: var(--button-primary-default);
     border-radius: 1rem;
@@ -48,7 +51,7 @@ button {
 
 button:hover {
     color: var(--text-invert);
-    background-color: var(--button-primary-hover);
+    background-color: var(--button-primary-default);
 }
 
 /* @media screen and (max-width: 800px) {
