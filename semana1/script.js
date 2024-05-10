@@ -3,5 +3,5 @@ document.querySelector("#quiz").addEventListener('submit', (event) => {
 })
 
 function enviar() {
-    document.querySelector("#quiz").children = "";
+    document.querySelector("#quiz").textContent = "";
 }

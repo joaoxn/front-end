@@ -1,33 +1,10 @@
-input, textarea {
-    color: #000;
-}
-
-.exercise {
-    padding: 0.5rem;
-    background-color: var(--button-primary-default);
-    border-radius: 2vmax;
-}
-
-.exercise:hover {
-    background-color: var(--button-primary-hover);
-    transform: scale(1.1);
-    transition-duration: 500ms;
-}
-
-.exercise > * {
-    color: var(--text-invert);
-    margin: 0.25rem;
-}
-
-.exercise > img {
-    width: 200px;
-}
-
 .input-advanced:focus {
     width: 14.25rem;
     height: 1.75rem;
     outline: none;
+    border: none;
     border-radius: 0.75rem;
+    transition-duration: 300ms;
 }
 
 .input-wrapper {
@@ -51,10 +28,6 @@ input, textarea {
 
 #start > * {
     margin: 0.5rem;
-}
-
-#start *:not(button) {
-    color: var(--text-invert);
 }
 
 /* @media screen and (max-width: 800px) {

@@ -15,24 +15,22 @@
             <img id="home-icon" alt="Home Icon - Go to Home"
                 src="https://store-images.s-microsoft.com/image/apps.9621.13858148302589540.63acfc5f-343f-40ae-86b2-8c6f973ef385.5befa77d-ab86-4841-aaa1-1b3d976835a3?h=464" />
         </a>
-        <h1>
-            <center>Exercício da Semana 1 - Front-End:<br /><b>LabQuiz</b></center>
+        <h1 class="text-center">
+            Exercício da Semana 1 - Front-End:<br /><b>LabQuiz</b>
         </h1>
         <div id="page-description">
-            <p>Este é o exercício da primeira semana de Front-End. Teste seus conhecimentos neste breve questionário sobre
+            <p class="text-center">Este é o exercício da primeira semana de Front-End. Teste seus conhecimentos neste breve questionário sobre
                 Front-End, focado em HTML!</p>
         </div>
-        <form id="start" class="row">
-            <div class="input-wrapper">
-                <input id="name" class="input-advanced" type="text" placeholder="Insira seu nome">
-            </div>
+        <form id="start" class="row justify-center">
+            <input id="name" type="text" placeholder="Insira seu nome">
             <button type="button">Iniciar</button>
         </form>
     </header>
     <main id="content-wrap">
         <form id="quiz">
             <label for="ans1">1. Como se define um estilo inline em HTML?</label><br />
-            <textarea id="ans1" name="answer1"></textarea>
+            <textarea id="ans1" name="answer1" placeholder="Insira sua resposta"></textarea>
             <br /><br />
             <label>2. Qual é a tag usada para criar uma lista ordenada em HTML?</label><br />
             <input id="ans2-opt1" type="radio" name="answer2" /> <label for="ans2-opt1">ol</label><br />
@@ -47,36 +45,36 @@
             <input id="ans3-opt4" type="radio" name="answer3" /> <label for="ans3-opt4">text-color</label>
             <br /><br />
             <label>4. Como se referencia um arquivo CSS externo em um documento HTML?</label><br />
-            <textarea id="ans4" name="answer4"></textarea>
+            <textarea id="ans4" name="answer4" placeholder="Insira sua resposta"></textarea>
             <br /><br />
             <label>5. Font-size é a propriedade CSS usada para alterar o tamanho da fonte de um texto?</label><br />
             <input id="ans5-opt1" type="radio" name="answer5" /> <label for="ans5-opt1">Sim</label><br />
             <input id="ans5-opt2" type="radio" name="answer5" /> <label for="ans5-opt2">Não</label><br />
             <br /><br />
             <label>6. Qual é a propriedade CSS usada para definir a largura de um elemento?</label><br />
-            <input id="ans6-opt1" type="checkbox" name="answer6" /> <label for="ans3-opt1">height</label><br />
-            <input id="ans6-opt2" type="checkbox" name="answer6" /> <label for="ans3-opt2">size</label><br />
-            <input id="ans6-opt3" type="checkbox" name="answer6" /> <label for="ans3-opt3">width</label><br />
-            <input id="ans6-opt4" type="checkbox" name="answer6" /> <label for="ans3-opt4">max-width</label>
+            <input id="ans6-opt1" type="checkbox" name="answer6" /> <label for="ans6-opt1">height</label><br />
+            <input id="ans6-opt2" type="checkbox" name="answer6" /> <label for="ans6-opt2">size</label><br />
+            <input id="ans6-opt3" type="checkbox" name="answer6" /> <label for="ans6-opt3">width</label><br />
+            <input id="ans6-opt4" type="checkbox" name="answer6" /> <label for="ans6-opt4">max-width</label>
             <br /><br />
             <label>7. Como se cria um comentário em CSS?</label><br />
-            <input id="ans7-opt1" type="checkbox" name="answer7" /> <label for="ans3-opt1">&lt;!-- --&gt;</label><br />
-            <input id="ans7-opt2" type="checkbox" name="answer7" /> <label for="ans3-opt2">//</label><br />
-            <input id="ans7-opt3" type="checkbox" name="answer7" /> <label for="ans3-opt3">/* */</label>
+            <input id="ans7-opt1" type="checkbox" name="answer7" /> <label for="ans7-opt1">&lt;!-- --&gt;</label><br />
+            <input id="ans7-opt2" type="checkbox" name="answer7" /> <label for="ans7-opt2">//</label><br />
+            <input id="ans7-opt3" type="checkbox" name="answer7" /> <label for="ans7-opt3">/* */</label>
             <br /><br />
             <label>8. Qual é a propriedade CSS usada para definir a altura de um elemento?</label><br />
-            <input id="ans8-opt1" type="checkbox" name="answer8" /> <label for="ans3-opt1">height</label><br />
-            <input id="ans8-opt2" type="checkbox" name="answer8" /> <label for="ans3-opt2">size</label><br />
-            <input id="ans8-opt3" type="checkbox" name="answer8" /> <label for="ans3-opt3">min-height</label><br />
-            <input id="ans8-opt4" type="checkbox" name="answer8" /> <label for="ans3-opt4">max-height</label>
+            <input id="ans8-opt1" type="checkbox" name="answer8" /> <label for="ans8-opt1">height</label><br />
+            <input id="ans8-opt2" type="checkbox" name="answer8" /> <label for="ans8-opt2">size</label><br />
+            <input id="ans8-opt3" type="checkbox" name="answer8" /> <label for="ans8-opt3">min-height</label><br />
+            <input id="ans8-opt4" type="checkbox" name="answer8" /> <label for="ans8-opt4">max-height</label>
             <br /><br />
             <button id="enviarFormulario" onclick="enviar()">Enviar</button>
         </form>
     </main>
-    <footer class="footer justify-evenly align wrap">
+    <footer class="footer justify-evenly align-center wrap">
         <p>João Victor de Souza Olivo - Fullstack Web Developer</p>
         <p>Veja meu github: <a href="https://github.com/joaoxn" target="_blank">joaoxn</a></p>
-        <div id="footer-bottom" class="row justify-evenly align wrap">
+        <div id="footer-bottom" class="row justify-evenly align-center wrap">
             <p class="text-secondary small">Fale comigo pelo e-mail: joao_v_olivo@estudante.sesisenai.org.br (estudante), jvso@yahoo.com (pessoal)</p>
             <p class="text-secondary small">Atividade do curso Fullstack [Education], Web Development - LAB365</p>
         </div>
