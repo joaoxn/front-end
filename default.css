@@ -66,9 +66,8 @@ button:hover {
 }
 
 hr {
-    border: none;
-    height: 0.5rem;
-    background-color: var(--background-tertiary);
+    height: 0;
+    border: 0.25rem solid var(--background-tertiary);
 }
 
 .header {
@@ -142,7 +141,7 @@ a:visited {
 }
 
 hr .rounded {
-    border-radius: 0.5rem;
+    border-radius: 0.25rem;
 }
 
 #home-icon {
