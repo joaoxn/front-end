@@ -10,7 +10,7 @@
     --background-invert: #fff;
     --button-primary-default: #fff;
     --button-primary-hover: #cdcdcd;
-    --solid-emphasis: #4673c8;
+    --solid-emphasis: #5d8de7;
     --gradient-emphasis: linear-gradient(to bottom right, #8cb4ff, #003391);
 }
 
@@ -26,6 +26,14 @@ body {
     margin: 0;
     float: left;
     background-color: var(--background-primary);
+}
+
+a {
+    color: var(--text-link);
+}
+
+a:visited {
+    color: var(--text-visited);
 }
 
 input[type="text"], textarea {
@@ -67,7 +75,7 @@ button:hover {
 
 hr {
     height: 0;
-    border: 0.25rem solid var(--background-tertiary);
+    border: 0.15rem solid var(--background-tertiary);
 }
 
 .header {
@@ -87,14 +95,6 @@ hr {
     bottom: 0;
     background-color: var(--background-secondary);
     color: aliceblue;
-}
-
-a {
-    color: var(--text-link);
-}
-
-a:visited {
-    color: var(--text-visited);
 }
 
 .align-center {
@@ -140,8 +140,13 @@ a:visited {
     color: var(--text-secondary);
 }
 
-hr .rounded {
-    border-radius: 0.25rem;
+.bold {
+    font-weight: bold;
+}
+
+hr.rounded {
+    border-width: 0.2rem;
+    border-radius: 10rem;
 }
 
 #home-icon {
