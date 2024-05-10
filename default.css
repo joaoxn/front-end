@@ -65,6 +65,12 @@ button:hover {
     cursor: pointer;
 }
 
+hr {
+    border: none;
+    height: 0.5rem;
+    background-color: var(--background-tertiary);
+}
+
 .header {
     margin: 0;
     padding: 0.5rem;
@@ -133,6 +139,10 @@ a:visited {
 .text-secondary {
     margin: 0;
     color: var(--text-secondary);
+}
+
+hr .rounded {
+    border-radius: 0.5rem;
 }
 
 #home-icon {
