@@ -1,0 +1,21 @@
+:root {
+    --text-primary: #fff;
+    --text-secondary: #cdcdcd;
+    --text-invert: #1b1b1b;
+    --text-link: #8cb4ff;
+    --text-visited: #ffadff;
+    --background-primary: #1b1b1b;
+    --background-secondary: #313131;
+    --background-tertiary: #858585;
+    --background-invert: #fff;
+    --button-primary-default: #fff;
+    --button-primary-hover: #cdcdcd;
+    --solid-emphasis: #5d8de7;
+    --gradient-emphasis: linear-gradient(to bottom right, #8cb4ff, #003391);
+}
+
+* {
+    color: var(--text-primary);
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
