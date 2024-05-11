@@ -20,11 +20,9 @@
     box-sizing: border-box;
 }
 
-body {
-    width: 100vw;
+html, body {
     min-height: 100vh;
     margin: 0;
-    float: left;
     background-color: var(--background-primary);
 }
 
@@ -48,13 +46,13 @@ input[type="text"], textarea {
 input[type="text"]:focus:not(.input-advanced), textarea:focus:not(.input-advanced) {
     outline: none;
     border: 0.375rem solid var(--solid-emphasis);
-    transition-duration: 300ms;
+    transition-duration: 200ms;
 }
 
 textarea {
     padding: 0.5rem;
     width: 20rem;
-    height: 3rem;
+    height: 4rem;
 }
 
 button {
@@ -81,7 +79,7 @@ hr {
 .header {
     margin: 0;
     padding: 0.5rem;
-    width: 100vw;
+    width: 100%;
     position: relative;
     background-color: var(--background-secondary);
     color: aliceblue;
@@ -90,7 +88,7 @@ hr {
 .footer {
     margin: 0;
     padding: 1rem;
-    width: 100vw;
+    width: 100%;
     position: absolute;
     bottom: 0;
     background-color: var(--background-secondary);
@@ -157,7 +155,7 @@ hr.rounded {
 
 #home-icon:hover {
     opacity: 0.5;
-    transition-duration: 300ms;
+    transition-duration: 200ms;
 }
 
 #home-link {
