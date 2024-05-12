@@ -64,9 +64,9 @@ hr {
     margin: 0;
     padding: 0.5rem;
     width: 100%;
-    position: relative;
-    background-color: var(--background-secondary);
     color: aliceblue;
+    background-color: var(--background-secondary);
+    position: relative;
 }
 
 .footer {
@@ -117,6 +117,10 @@ hr {
     font-size: small;
 }
 
+.margin {
+    margin: 0.5rem;
+}
+
 .text-secondary {
     margin: 0;
     color: var(--text-secondary);
@@ -131,11 +135,37 @@ hr.rounded {
     border-radius: 10rem;
 }
 
-/* #navbar {
+#navbar {
     width: 100%;
     background-color: var(--background-primary);
     border-bottom: 0.2rem solid var(--background-tertiary);
-} */
+}
+
+#appearance-switch {
+    width: 5rem;
+    border-radius: 100rem;
+}
+
+#appearance-switch:hover {
+    background-color: var(--background-secondary);
+}
+
+#appearance-switch > span {
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: var(--background-invert);
+    border: 0.15rem outset var(--background-invert);
+    border-radius: 100rem;
+}
+
+html.dark {
+    #appearance-switch {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+    }
+}
 
 #header-text {
     width: 100%;
@@ -147,7 +177,7 @@ hr.rounded {
     max-height: 2.5rem;
 }
 
-@media (prefers-color-scheme: light) {
+html.light {
     #home-icon {
         filter: brightness(0);
     }
