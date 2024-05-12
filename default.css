@@ -131,10 +131,26 @@ hr.rounded {
     border-radius: 10rem;
 }
 
+/* #navbar {
+    width: 100%;
+    background-color: var(--background-primary);
+    border-bottom: 0.2rem solid var(--background-tertiary);
+} */
+
+#header-text {
+    width: 100%;
+}
+
 #home-icon {
-    margin: 20px;
-    max-width: 50px;
-    max-height: 50px;
+    margin: 0.5rem;
+    max-width: 2.5rem;
+    max-height: 2.5rem;
+}
+
+@media (prefers-color-scheme: light) {
+    #home-icon {
+        filter: brightness(0);
+    }
 }
 
 #home-icon:hover {
@@ -155,11 +171,6 @@ hr.rounded {
 #content-wrap {
     padding: 1rem;
 }
-
-#header-text {
-    width: 100%;
-}
-
 
 #footer-bottom > * {
     margin: 0.25rem 0.5rem;
