@@ -1,4 +1,4 @@
-*:focus {
+*:focus-visible {
     outline: 0.2rem outset var(--solid-emphasis);
     border: none;
     transition-duration: 200ms;
@@ -158,4 +158,9 @@ hr.rounded {
 
 #header-text {
     width: 100%;
+}
+
+
+#footer-bottom > * {
+    margin: 0.25rem 0.5rem;
 }
