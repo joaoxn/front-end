@@ -147,7 +147,7 @@ hr.rounded {
 }
 
 #appearance-switch:hover {
-    background-color: var(--background-secondary);
+    background: var(--background-secondary);
 }
 
 #appearance-switch > span {
@@ -159,12 +159,11 @@ hr.rounded {
     border-radius: 100rem;
 }
 
-html.dark {
-    #appearance-switch {
-        display: flex;
-        justify-content: right;
-        align-items: center;
-    }
+html.dark #appearance-switch {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    background: var(--gradient-emphasis);
 }
 
 #header-text {
@@ -177,10 +176,8 @@ html.dark {
     max-height: 2.5rem;
 }
 
-html.light {
-    #home-icon {
-        filter: brightness(0);
-    }
+html.light #home-icon {
+    filter: brightness(0);
 }
 
 #home-icon:hover {
