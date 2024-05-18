@@ -5,13 +5,13 @@ function updateResizeBased() {
     content = document.querySelector("#content-wrap");
     footer = document.querySelector(".footer");
 
-    const newHeight = window.computedStyleNumber(footer, "height") + window.computedStyleNumber(content, "paddingTop") + "px";
+    const newHeight = computedStyleNumber(footer, "height") + computedStyleNumber(content, "paddingTop") + "px";
 
     content.style.paddingBottom = newHeight;
 }
 
 function computedStyleNumber(element, styleProperty) {
-    return parseFloat(window.getComputedStyle(element)[styleProperty].replace(/\D/g, ""));
+    return parseFloat(window.getComputedStyle(element)[styleProperty].match(/^[0-9]*\.?[0-9]*$/));
 }
 
 document.querySelector("#appearance-switch").addEventListener("click", () => {
