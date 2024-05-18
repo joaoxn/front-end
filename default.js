@@ -11,7 +11,7 @@ function updateResizeBased() {
 }
 
 function computedStyleNumber(element, styleProperty) {
-    return parseFloat(window.getComputedStyle(element)[styleProperty].match(/^[0-9]*\.?[0-9]*$/));
+    return parseFloat(window.getComputedStyle(element)[styleProperty].replace(/\.+$/,""));
 }
 
 document.querySelector("#appearance-switch").addEventListener("click", () => {
