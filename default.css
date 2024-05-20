@@ -108,7 +108,7 @@ hr {
     flex-direction: column;
 }
 
-.row {
+.direction-row {
     display: flex;
     flex-direction: row;
 }
@@ -126,8 +126,28 @@ hr {
     color: var(--text-secondary);
 }
 
+.text-topic {
+    margin-top: 3rem;
+    margin-left: 3rem;
+}
+
 .bold {
     font-weight: bold;
+}
+
+.colors-primary {
+    background-color: var(--background-primary);
+    color: var(--text-primary);
+}
+
+.colors-secondary {
+    background-color: var(--background-secondary);
+    color: var(--text-secondary);
+}
+
+.colors-tertiary {
+    background-color: var(--background-tertiary);
+    color: var(--text-invert);
 }
 
 hr.rounded {
@@ -174,6 +194,10 @@ html.dark #appearance-switch {
     margin: 0.5rem;
     max-width: 2.5rem;
     max-height: 2.5rem;
+}
+
+#profile-picture {
+    height: 2.5rem;
 }
 
 html.light #home-icon {
