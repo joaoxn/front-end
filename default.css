@@ -84,14 +84,19 @@ hr {
     align-items: center;
 }
 
-.justify-evenly {
-    display: flex;
-    justify-content: space-evenly;
-}
-
 .justify-center {
     display: flex;
     justify-content: center;
+}
+
+.justify-right {
+    display: flex;
+    justify-content: right;
+}
+
+.justify-evenly {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .text-center {
@@ -124,6 +129,23 @@ hr {
 .text-secondary {
     margin: 0;
     color: var(--text-secondary);
+}
+
+.text-invert {
+    color: var(--text-invert);
+}
+
+div.text-invert *,
+header.text-invert *,
+main.text-invert *,
+footer.text-invert *,
+section.text-invert *,
+article.text-invert *,
+aside.text-invert *,
+nav.text-invert *,
+figure.text-invert *,
+details.text-invert * {
+    color: var(--text-invert)
 }
 
 .text-topic {

@@ -4,15 +4,22 @@ window.addEventListener('resize', updateResizeBased);
 function updateResizeBased() {
     content = document.querySelector("#content-wrap");
     footer = document.querySelector(".footer");
-    elems3by2 = document.querySelectorAll(".ratio2by3");
+
+    elems1by1 = document.querySelectorAll(".ratio1by1");
+    elems3by2 = document.querySelectorAll(".ratio3by2");
 
     const newHeight = computedStyleNumber(footer, "height") + computedStyleNumber(content, "paddingTop") + "px";
 
     content.style.paddingBottom = newHeight;
 
-    elems3by2.forEach(element => {
-        element.style.width = computedStyleNumber(element, "height")*3/2 + "px";
-    });
+    adjustRatioOfElements(elems1by1, 1);
+    adjustRatioOfElements(elems3by2, 3/2);
+}
+
+function adjustRatioOfElements(elements, ratio) {
+    elements.forEach(element => {
+        element.style.width = computedStyleNumber(element, "height")*ratio + "px";
+    })
 }
 
 function computedStyleNumber(element, styleProperty) {
