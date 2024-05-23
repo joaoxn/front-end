@@ -72,7 +72,7 @@ Cancele a ação quando desejar parar.`
                 nome, "Seu nome é necessário para exibir essa mensagem!");
         } else {
             escreverNaTela(`<p style="background-color: var(--background-secondary); border-radius: 1rem; padding: 1rem;">Infelizmente, você não alcançou a média mínima. Média: ${media}</h3>`,
-                media, "As notas são necessárias para calcular seu desempenho!");
+                media || media == 0, "As notas são necessárias para calcular seu desempenho!");
         }
     }
 }
