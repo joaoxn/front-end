@@ -2,8 +2,8 @@
 
 let nome;
 
-    aula2();
-    aula3();
+aula2();
+aula3();
 
 /// MINHA BIBLIOTECA DE FUNÇÕES ///
 
@@ -41,22 +41,27 @@ function aula3() {
     { // Exercício: Cálculo de Média
         escreverNaTela("<h2>Exercício: Cálculo de Média</h2>");
         let soma = 0;
-        let i;
-        let notas = parseInt(window.prompt("Quantas notas avaliativas você quer utilizar para calcular sua média?"));
-        for (i = 0; i < notas; i++) {
-            let notaInput = window.prompt(`Digite sua ${i + 1}ª nota`);
+        let i = 1;
+        if (window.confirm(
+            `A média de suas notas será calculada a seguir.\n
+Por favor, digite as notas desejadas para calcular a média entre elas.\n
+Cancele a ação quando desejar parar.`
+        )) {
+            while (true) {
+                let notaInput = window.prompt(`Digite sua ${i}ª nota`);
 
-            if (notaInput == null) {
-                break;
-            } else if (isNaN(parseFloat(notaInput))) {
-                alert("Entrada inválida! Digite um número inteiro ou decimal!");
-                i--;
-                continue;
-            } else {
-                soma += parseFloat(notaInput);
+                if (notaInput == null) {
+                    i--;
+                    break;
+                } else if (isNaN(parseFloat(notaInput))) {
+                    alert("Entrada inválida! Digite um número inteiro ou decimal!");
+                    continue;
+                } else {
+                    soma += parseFloat(notaInput);
+                }
+                i++;
             }
         }
-
         let media = soma / i;
 
         if (media >= 7) {
