@@ -62,7 +62,7 @@ function aula3() {
         if (media >= 7) {
             escreverNaTela(`<p style="background-color: var(--background-secondary); border-radius: 1rem; padding: 1rem;">Parabéns, ${nome}! Você superou a média mínima, não esqueça de continuar estudando! :) Média: ${media}</h3>`, nome, "Seu nome é necessário para exibir essa mensagem!");
         } else {
-            escreverNaTela(`<p style="background-color: var(--background-secondary); border-radius: 1rem; padding: 1rem;">Infelizmente, você não alcançou a média mínima. Média: ${media}</h3>`, media, "A média é necessária para calcular seu desempenho!");
+            escreverNaTela(`<p style="background-color: var(--background-secondary); border-radius: 1rem; padding: 1rem;">Infelizmente, você não alcançou a média mínima. Média: ${media}</h3>`, media, "As notas são necessárias para calcular seu desempenho!");
         }
     }
 }
