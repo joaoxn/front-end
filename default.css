@@ -14,7 +14,7 @@ a {
     color: var(--text-link);
 }
 
-a:visited {
+a:visited:not(.button) {
     color: var(--text-visited);
 }
 
@@ -133,6 +133,10 @@ hr {
 
 .text-invert {
     color: var(--text-invert);
+}
+
+.remove-bg {
+    background-color: transparent;
 }
 
 div.text-invert *,
