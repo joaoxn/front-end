@@ -1,39 +1,13 @@
 let nome = window.prompt("Digite seu nome");
-let notas = [];
 let defaultCard = [`<p style="background-color: var(--background-secondary); border-radius: 1rem; padding: 1rem;">`, `</p>`];
-capturarNotas();
-exibirDesempenho(calcularMedia(notas));
+exibirDesempenho(calcularMedia(capturarNotas().notas));
 escreverNomes(["João", "Jéssica", "Júlia"], "Nomes de pessoas aleatórias: ");
 
-escreverNaTela("<p class='text-center'" + defaultCard[0].slice(2) + tabuada([3, 4], [4, 6]) + defaultCard[1]);
+escreverNaTela("<p class='text-center'" + defaultCard[0].slice(2) + tabuada([30, 40], [34, 46]) + defaultCard[1]);
 
 capturarDadosAluno();
 
 /// Início - MINHA BIBLIOTECA DE FUNÇÕES ///
-
-function capturarNotas() {
-    let i = 1;
-    if (window.confirm(
-        `A média de suas notas será calculada a seguir.\n
-Por favor, digite as notas desejadas para calcular a média entre elas.\n
-Cancele a ação quando desejar parar.`
-    )) {
-        while (true) {
-            let notaInput = window.prompt(`Digite sua ${i}ª nota`);
-
-            if (notaInput == null) {
-                i--;
-                break;
-            } else if (isNaN(parseFloat(notaInput))) {
-                alert("Entrada inválida! Digite um número inteiro ou decimal!");
-                continue;
-            } else {
-                notas.push(parseFloat(notaInput));
-            }
-            i++;
-        }
-    }
-}
 
 function escreverNaTela(textoFormatado, condicao, motivo) {
     // textoFormatado exibe apenas se condicao == true || condicao === undefined
@@ -121,4 +95,42 @@ function capturarDadosAluno() {
         Escola: ${aluno.escola}<br/>
         Matéria: ${aluno.materia}`
         + defaultCard[1], confirma, "Os dados não foram informados corretamente ou foram cancelados.");
+}
+
+// Ex. 06
+function capturarNotas() {
+    let i = 1;
+    let notas = []
+    let materia;
+    if (window.confirm(
+        `A média de suas notas será calculada a seguir.\n
+Por favor, digite as notas desejadas para calcular a média entre elas.\n
+Cancele a ação quando desejar parar.\n
+Cancele essa ação para pular esse processo!`
+    )) {
+        materia = window.prompt("Digite a matéria das suas notas");
+        while (true) {
+            let notaInput = window.prompt(`Digite sua ${i}ª nota. Cancele quando desejar parar!`);
+
+            if (notaInput == null) {
+                i--;
+                break;
+            } else if (isNaN(parseFloat(notaInput))) {
+                alert("Entrada inválida! Digite um número inteiro ou decimal!");
+                continue;
+            } else {
+                notas.push(parseFloat(notaInput));
+            }
+            i++;
+        }
+    }
+    return {
+        nomeMateria: materia,
+        notas: notas
+    }
+}
+
+// Ex. 07
+function maiorElemento(array) { // Compara baseado em elemento1 > elemento2
+    return array.reduce((resultado, elem) => elem > resultado);
 }
