@@ -24,12 +24,12 @@ function escreverNaTela(textoFormatado, condicao, motivo) {
 
 /// Fim - MINHA BIBLIOTECA DE FUNÇÕES ///
 
-// Ex. 01
+// Semana 3 - Ex. 01
 function calcularMedia(array) {
-    return array.reduce((total, numero) => total + numero, 0) / array.length;
+    return somaArray(array) / array.length;
 }
 
-// Ex. 02
+// Semana 3 - Ex. 02
 function exibirDesempenho(notaFinal) {
     if (notaFinal >= 10) {
         escreverNaTela(`${defaultCard[0]}Parabéns, ${nome}! Você arrasou, aprovado com excelência! :D Média: ${notaFinal}${defaultCard[1]}`,
@@ -43,7 +43,7 @@ function exibirDesempenho(notaFinal) {
     }
 }
 
-// Ex. 03
+// Semana 3 - Ex. 03
 function arrayToString(array) {
     let text = "";
     array.forEach(elem => {
@@ -57,7 +57,7 @@ function escreverNomes(nomes, prefixo) {
     escreverNaTela(defaultCard[0] + prefixo + arrayToString(nomes) + defaultCard[1])
 }
 
-// Ex. 04
+// Semana 3 - Ex. 04
 function tabuada(xAlcance, yAlcance) {
     let texto = "";
     for (let i = xAlcance[0]; i <= xAlcance[1]; i++) {
@@ -69,7 +69,7 @@ function tabuada(xAlcance, yAlcance) {
     return texto;
 }
 
-// Ex. 05
+// Semana 3 - Ex. 05
 function capturarDadosAluno() {
     const aluno = {}
     aluno.nome = window.prompt("Qual o nome do aluno?");
@@ -97,7 +97,7 @@ function capturarDadosAluno() {
         + defaultCard[1], confirma, "Os dados não foram informados corretamente ou foram cancelados.");
 }
 
-// Ex. 06
+// Semana 3 - Ex. 06
 function capturarNotas() {
     let i = 1;
     let notas = []
@@ -130,7 +130,14 @@ Cancele essa ação para pular esse processo!`
     }
 }
 
-// Ex. 07
+// Semana 3 - Ex. 07
 function maiorElemento(array) { // Compara baseado em elemento1 > elemento2
     return array.reduce((resultado, elem) => elem > resultado);
 }
+
+// Semana 4 - Ex. 01
+function somaArray(array) {
+    return array.reduce((total, numero) => total + numero);
+}
+
+//  Semana 4 - Ex. 02
