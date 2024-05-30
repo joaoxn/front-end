@@ -41,3 +41,36 @@
         console.log(numerosMaior);   
     }
 }
+
+{ console.log("AULA 3");
+    class Carro {
+        constructor(modelo, cor, marca) {
+            this.modelo = modelo
+            this.cor = cor
+            this.marca = marca
+            Object.preventExtensions(this)
+        }
+
+        metodo() {
+            this.aaah = "shit"
+        }
+    }
+    let carro = new Carro("corolla", "prata")
+    console.log(carro)
+    carro.modelo = "modelo"
+    console.log(carro)
+    carro.doideira = "mama"
+    console.log(carro)
+    {
+        {
+            const {modelo} = carro
+            modelo1_temp = modelo
+        }
+    }
+    const modelo1 = modelo1_temp
+    console.log(modelo1_temp)
+    delete modelo1_temp
+    const {modelo} = new Carro("modelo2")
+    console.log(modelo1)
+    console.log(modelo1_temp)
+}
