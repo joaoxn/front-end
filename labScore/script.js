@@ -142,20 +142,24 @@ Cancele essa ação para pular esse processo!`
 
 /**
 * Compara elementos de um array e retorna o maior entre eles.
-* Define um elemento como o maior se - elemento > maiorAnterior 
-* @param {number} a - O primeiro número.
-* @param {number} b - O segundo número.
-* @returns {number} A soma de a e b.
-* @throws Se qualquer um dos argumentos não for um número.
-
+* Define um elemento do array como o maior se elemento > (qualquer outro elemento)
+* @param {array} array - O array que será operado.
+* @returns {number} O maior elemento do array. 
+* @throws Se o parâmetro 'array' não for um array ou um array vazio.
 */
 function maiorElemento(array) { // Compara baseado em elemento1 > elemento2
     return array.reduce((resultado, elem) => elem > resultado);
 }
 
 // Semana 4 - Ex. 01
-function somaArray(array) {
-    return Array.isArray(array) && array.length > 0 ? array.reduce((total, numero) => total + numero) : undefined;
+
+/**
+ * @param {array} array - O array que será operado
+ * @returns {number} A soma de todos os elementos do array.
+ * @throws Se o parâmetro 'array' não for um array ou um array vazio.
+ */
+function somarArray(array) {
+    return array.reduce((total, numero) => total + numero);
 }
 
 // Semana 4 - Ex. 02
@@ -167,7 +171,7 @@ console.log(pares);
 const quadrados = numeros.map((elem) => elem ** 2)
 console.log(quadrados);
 
-// Semana 4 - Ex. 04
+// Semana 4 - Ex. 04 ao 08
 class Produto {
     constructor(nome, preco, quantidade) {
         this.nome = nome;
@@ -176,13 +180,30 @@ class Produto {
         Object.preventExtensions(this);
     }
 
-    vender(qtd){
+    /**
+     * Vende a quantidade desejada de um item se houver quantidade disponível.
+     * @param {number} qtd - Quantidade a ser vendida
+     * @returns {number} Valor monetário ganho na venda: qtd * this.preco
+     * @throws Se quantidade a ser vendida for menor que a quantidade disponível
+     */
+    vender(qtd) {
         if (qtd < this.quantidade) {
-            // throw new Error("Quantidade indisponível para venda");
-            return "Estoque insuficiente";
+            throw new Error("Estoque insuficiente");
         } else {
             this.quantidade -= qtd;
-            return this.quantidade*this.preco;
+            return qtd*this.preco;
         }
+    }
+
+    repor(qtd) {
+        this.quantidade += qtd;
+    }
+
+    mostrarEstoque() {
+        console.log(`O produto ${this.nome} possui ${this.quantidade} unidades disponíveis`);
+    }
+
+    atualizarPreco(precoNovo) {
+        this.preco = precoNovo;
     }
 }
