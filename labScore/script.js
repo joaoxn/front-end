@@ -3,9 +3,10 @@ let defaultCard = [`<p style="background-color: var(--background-secondary); bor
 exibirDesempenho(calcularMedia(capturarNotas().notas));
 escreverNomes(["João", "Jéssica", "Júlia"], "Nomes de pessoas aleatórias: ");
 
-escreverNaTela("<p class='text-center'" + defaultCard[0].slice(2) + tabuada([30, 40], [34, 46]) + defaultCard[1]);
+escreverNaTela(defaultCard[0].slice(0, -1) + " class='text-center'" + tabuada([8, 8], [1, 10]) + defaultCard[1]);
 
 capturarDadosAluno();
+
 
 /// Início - MINHA BIBLIOTECA DE FUNÇÕES ///
 
@@ -26,6 +27,12 @@ function escreverNaTela(textoFormatado, condicao, motivo) {
 
 // Semana 3 - Ex. 01
 function calcularMedia(array) {
+    if (!Array.isArray(array) || array.length == 0) {
+        if (typeof array == "number") {
+            return array;
+        }
+        return undefined;
+    }
     return somaArray(array) / array.length;
 }
 
@@ -62,11 +69,12 @@ function tabuada(xAlcance, yAlcance) {
     let texto = "";
     for (let i = xAlcance[0]; i <= xAlcance[1]; i++) {
         for (let j = yAlcance[0]; j <= yAlcance[1]; j++) {
-            texto += `${i} x ${j} = ${i * j}<br/>`;
+            texto += `${i} x ${j} = ${i * j}<br>`;
         }
-        texto += "<br/>";
+        texto += "<br>";
     }
-    return texto;
+
+    return texto.slice(0, -8);
 }
 
 // Semana 3 - Ex. 05
@@ -100,7 +108,7 @@ function capturarDadosAluno() {
 // Semana 3 - Ex. 06
 function capturarNotas() {
     let i = 1;
-    let notas = []
+    let notas;
     let materia;
     if (window.confirm(
         `A média de suas notas será calculada a seguir.\n
@@ -131,13 +139,50 @@ Cancele essa ação para pular esse processo!`
 }
 
 // Semana 3 - Ex. 07
+
+/**
+* Compara elementos de um array e retorna o maior entre eles.
+* Define um elemento como o maior se - elemento > maiorAnterior 
+* @param {number} a - O primeiro número.
+* @param {number} b - O segundo número.
+* @returns {number} A soma de a e b.
+* @throws Se qualquer um dos argumentos não for um número.
+
+*/
 function maiorElemento(array) { // Compara baseado em elemento1 > elemento2
     return array.reduce((resultado, elem) => elem > resultado);
 }
 
 // Semana 4 - Ex. 01
 function somaArray(array) {
-    return array.reduce((total, numero) => total + numero);
+    return Array.isArray(array) && array.length > 0 ? array.reduce((total, numero) => total + numero) : undefined;
 }
 
-//  Semana 4 - Ex. 02
+// Semana 4 - Ex. 02
+const numeros = [10, 9, 4.5, 13, -12, 0, -1, -0.5, 604, 2];
+const pares = numeros.filter((elem) => elem % 2 == 0);
+console.log(pares);
+
+// Semana 4 - Ex. 03
+const quadrados = numeros.map((elem) => elem ** 2)
+console.log(quadrados);
+
+// Semana 4 - Ex. 04
+class Produto {
+    constructor(nome, preco, quantidade) {
+        this.nome = nome;
+        this.preco = preco;
+        this.quantidade = quantidade;
+        Object.preventExtensions(this);
+    }
+
+    vender(qtd){
+        if (qtd < this.quantidade) {
+            // throw new Error("Quantidade indisponível para venda");
+            return "Estoque insuficiente";
+        } else {
+            this.quantidade -= qtd;
+            return this.quantidade*this.preco;
+        }
+    }
+}
